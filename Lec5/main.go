@@ -18,8 +18,7 @@ func main() {
 		fmt.Println("Значение не четное")
 	}
 
-	isDno := true
-	if isDno {
+	if isDno := true; isDno {
 		fmt.Println("====Подвал=====")
 	}
 
