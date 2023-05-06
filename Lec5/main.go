@@ -18,7 +18,7 @@ func main() {
 		fmt.Println("Значение не четное")
 	}
 
-	if isDno := true; isDno {
+	if isDno := false; isDno {
 		fmt.Println("====Подвал=====")
 	}
 
@@ -36,6 +36,14 @@ func main() {
 
 	} else {
 		fmt.Println("Обнаружен не ожидаемый цвет")
+	}
+
+	// Инициализация в блоке условного оператора
+
+	if num := 10; num%2 == 0 {
+		fmt.Println("num Четный")
+	} else {
+		fmt.Println("num НЕ Четный")
 	}
 
 }
