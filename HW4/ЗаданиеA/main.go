@@ -2,7 +2,6 @@ package main
 
 import (
 	"fmt"
-	"math"
 	"unicode/utf8"
 )
 
@@ -13,17 +12,22 @@ func main() {
 	var текстовыйЛоготип string
 	fmt.Scan(&текстовыйЛоготип)
 
-	числоБукв := utf8.RuneCountInString(текстовыйЛоготип)
-	fixPrice := 0.23
+	числоБуквЛоготипа := utf8.RuneCountInString(текстовыйЛоготип)
+	fixPriceКопеек := 23
 
-	суммаЗаказа := float64(числоБукв) * fixPrice
+	суммаЗаказаКопеек := числоБуквЛоготипа * fixPriceКопеек
+	одинРубль := 1 * CentFactor()
 
-	if суммаЗаказа < 1 {
-		fmt.Printf("%.f коп.\n", суммаЗаказа*100)
+	if суммаЗаказаКопеек < одинРубль {
+		fmt.Printf("%.d коп.\n", суммаЗаказаКопеек)
 	} else {
-		рубли := math.Floor(суммаЗаказа)
-		копейки := суммаЗаказа - рубли
-		fmt.Printf("%.f р. %.f коп. \n", рубли, копейки*100)
+		остаток := суммаЗаказаКопеек % CentFactor()
+		целое := (суммаЗаказаКопеек - остаток) / CentFactor()
+		fmt.Printf("%d р. %d коп.\n", целое, остаток)
 	}
 
+}
+
+func CentFactor() int {
+	return 100
 }
