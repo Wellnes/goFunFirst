@@ -46,4 +46,17 @@ func main() {
 		fmt.Println("num НЕ Четный")
 	}
 
+	fmt.Println("===================")
+
+	var val float64 = 0.00
+	for i := 0; i < 10; i++ {
+		val += 0.10
+		fmt.Println(val)
+	}
+	fmt.Println(val == 1.00)
+
+	fmt.Println("===================")
+
+	fmt.Println(530 % 100)
+
 }
