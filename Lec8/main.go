@@ -66,4 +66,17 @@ func main() {
 		fmt.Print("\n")
 	}
 
+	fmt.Println("====================")
+
+	var ar [2]int = [2]int{1, 2}
+	fmt.Printf("%T\n", ar)
+
+	ara := [...]string{10: ""}
+
+	ara[0] = "a"
+	ara[1] = "b"
+	ara[2] = "c"
+
+	fmt.Println(ara)
+	fmt.Printf("%X\n", ara)
 }
