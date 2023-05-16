@@ -50,4 +50,10 @@ func main() {
 	for _, val := range байтовыйСрез {
 		fmt.Printf("%c\n", val)
 	}
+
+	fmt.Println("Введите строку:")
+	var вхСтрока1, вхСтрока2 string
+	rez, err := fmt.Scanf("%s %s", &вхСтрока1, &вхСтрока2)
+	fmt.Println(rez, err == nil, вхСтрока1, вхСтрока2)
+
 }
