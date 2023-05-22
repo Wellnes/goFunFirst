@@ -17,6 +17,7 @@ func main() {
 		"Alice": 1000,
 	}
 	newMapper["Jo"] = 1000
+	newMapper["Вася"] = newMapper["Вася"] + 1000
 
 	fmt.Println(newMapper)
 
